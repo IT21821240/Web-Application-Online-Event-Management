@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>EventManagement</display-name>
+  <welcome-file-list>
+    <welcome-file>demo.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <display-name>MyFilter</display-name>
+    <filter-name>MyFilter</filter-name>
+    <filter-class>bookevent.MyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MyFilter</filter-name>
+    <url-pattern>/MyFilter</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MyServlet</display-name>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>bookevent.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>EventFilter</display-name>
+    <filter-name>EventFilter</filter-name>
+    <filter-class>AddEventPackage.EventFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EventFilter</filter-name>
+    <url-pattern>/EventFilter</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EventServlet</display-name>
+    <servlet-name>EventServlet</servlet-name>
+    <servlet-class>AddEventPackage.EventServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventServlet</servlet-name>
+    <url-pattern>/EventServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
